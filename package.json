@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .ts,.vue",
     "lint:fix": "eslint . --ext .ts,.vue --fix",
     "format": "prettier --write .",
-    "check": "npm run type-check && npm run lint"
+    "check": "npm run type-check && npm run lint",
+    "brand:generate": "advantacode-brander --out src/generated/brand"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
@@ -28,6 +29,7 @@
     "vue-router": "^5.0.3"
   },
   "devDependencies": {
+    "@advantacode/brander": "file:../../../../tmp/advantacode-brander-0.0.1.tgz",
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",

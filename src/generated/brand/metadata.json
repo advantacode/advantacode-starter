@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "generated": "2026-03-09T00:44:30.935Z",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "adapters": [
+    "tailwind",
+    "bootstrap",
+    "figma"
+  ],
+  "artifacts": [
+    "tokens.css",
+    "themes/light.css",
+    "themes/dark.css",
+    "tokens.json",
+    "tokens.scss",
+    "adapters/bootstrap.variables.scss",
+    "adapters/tailwind.preset.ts",
+    "adapters/figma.tokens.json",
+    "tokens.ts",
+    "metadata.json"
+  ],
+  "cssPrefix": ""
+}

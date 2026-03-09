@@ -1,0 +1,28 @@
+[data-theme="dark"] {
+  --background: var(--neutral-950);
+  --surface: var(--neutral-900);
+  --text: var(--neutral-50);
+  --muted: var(--neutral-900);
+  --muted-foreground: var(--neutral-300);
+  --card: var(--neutral-900);
+  --card-foreground: var(--neutral-50);
+  --popover: var(--neutral-900);
+  --popover-foreground: var(--neutral-50);
+  --border: var(--neutral-800);
+  --input: var(--neutral-800);
+  --ring: var(--primary-400);
+  --primary: var(--primary-500);
+  --primary-foreground: var(--neutral-950);
+  --secondary: var(--secondary-500);
+  --secondary-foreground: var(--neutral-950);
+  --accent: var(--accent-500);
+  --accent-foreground: var(--neutral-950);
+  --info: var(--info-500);
+  --info-foreground: var(--neutral-950);
+  --success: var(--success-500);
+  --success-foreground: var(--neutral-950);
+  --warning: var(--warning-500);
+  --warning-foreground: var(--neutral-950);
+  --danger: var(--danger-500);
+  --danger-foreground: var(--neutral-950);
+}

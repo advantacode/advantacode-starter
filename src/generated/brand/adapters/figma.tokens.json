@@ -1,0 +1,500 @@
+{
+  "color": {
+    "primitive": {
+      "primary": {
+        "50": {
+          "value": "oklch(0.97 0.232542 303.9)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.232542 303.9)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.232542 303.9)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.232542 303.9)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.232542 303.9)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.232542 303.9)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.232542 303.9)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.232542 303.9)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.232542 303.9)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.232542 303.9)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.232542 303.9)"
+        }
+      },
+      "secondary": {
+        "50": {
+          "value": "oklch(0.97 0.01188 285.805)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.01188 285.805)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.01188 285.805)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.01188 285.805)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.01188 285.805)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.01188 285.805)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.01188 285.805)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.01188 285.805)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.01188 285.805)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.01188 285.805)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.01188 285.805)"
+        }
+      },
+      "accent": {
+        "50": {
+          "value": "oklch(0.97 0.176688 305.504)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.176688 305.504)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.176688 305.504)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.176688 305.504)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.176688 305.504)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.176688 305.504)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.176688 305.504)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.176688 305.504)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.176688 305.504)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.176688 305.504)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.176688 305.504)"
+        }
+      },
+      "info": {
+        "50": {
+          "value": "oklch(0.97 0.147869 237.323)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.147869 237.323)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.147869 237.323)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.147869 237.323)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.147869 237.323)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.147869 237.323)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.147869 237.323)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.147869 237.323)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.147869 237.323)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.147869 237.323)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.147869 237.323)"
+        }
+      },
+      "success": {
+        "50": {
+          "value": "oklch(0.97 0.192007 149.579)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.192007 149.579)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.192007 149.579)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.192007 149.579)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.192007 149.579)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.192007 149.579)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.192007 149.579)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.192007 149.579)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.192007 149.579)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.192007 149.579)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.192007 149.579)"
+        }
+      },
+      "warning": {
+        "50": {
+          "value": "oklch(0.97 0.161668 86.047)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.161668 86.047)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.161668 86.047)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.161668 86.047)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.161668 86.047)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.161668 86.047)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.161668 86.047)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.161668 86.047)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.161668 86.047)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.161668 86.047)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.161668 86.047)"
+        }
+      },
+      "danger": {
+        "50": {
+          "value": "oklch(0.97 0.207849 25.331)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.207849 25.331)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.207849 25.331)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.207849 25.331)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.207849 25.331)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.207849 25.331)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.207849 25.331)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.207849 25.331)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.207849 25.331)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.207849 25.331)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.207849 25.331)"
+        }
+      },
+      "neutral": {
+        "50": {
+          "value": "oklch(0.97 0.01188 285.805)"
+        },
+        "100": {
+          "value": "oklch(0.93 0.01188 285.805)"
+        },
+        "200": {
+          "value": "oklch(0.87 0.01188 285.805)"
+        },
+        "300": {
+          "value": "oklch(0.8 0.01188 285.805)"
+        },
+        "400": {
+          "value": "oklch(0.72 0.01188 285.805)"
+        },
+        "500": {
+          "value": "oklch(0.65 0.01188 285.805)"
+        },
+        "600": {
+          "value": "oklch(0.57 0.01188 285.805)"
+        },
+        "700": {
+          "value": "oklch(0.49 0.01188 285.805)"
+        },
+        "800": {
+          "value": "oklch(0.4 0.01188 285.805)"
+        },
+        "900": {
+          "value": "oklch(0.32 0.01188 285.805)"
+        },
+        "950": {
+          "value": "oklch(0.24 0.01188 285.805)"
+        }
+      }
+    },
+    "semantic": {
+      "light": {
+        "background": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "surface": {
+          "value": "oklch(0.93 0.01188 285.805)",
+          "ref": "neutral.100"
+        },
+        "text": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "muted": {
+          "value": "oklch(0.93 0.01188 285.805)",
+          "ref": "neutral.100"
+        },
+        "muted-foreground": {
+          "value": "oklch(0.49 0.01188 285.805)",
+          "ref": "neutral.700"
+        },
+        "card": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "card-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "popover": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "popover-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "border": {
+          "value": "oklch(0.87 0.01188 285.805)",
+          "ref": "neutral.200"
+        },
+        "input": {
+          "value": "oklch(0.87 0.01188 285.805)",
+          "ref": "neutral.200"
+        },
+        "ring": {
+          "value": "oklch(0.65 0.232542 303.9)",
+          "ref": "primary.500"
+        },
+        "primary": {
+          "value": "oklch(0.57 0.232542 303.9)",
+          "ref": "primary.600"
+        },
+        "primary-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "secondary": {
+          "value": "oklch(0.57 0.01188 285.805)",
+          "ref": "secondary.600"
+        },
+        "secondary-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "accent": {
+          "value": "oklch(0.57 0.176688 305.504)",
+          "ref": "accent.600"
+        },
+        "accent-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "info": {
+          "value": "oklch(0.57 0.147869 237.323)",
+          "ref": "info.600"
+        },
+        "info-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "success": {
+          "value": "oklch(0.57 0.192007 149.579)",
+          "ref": "success.600"
+        },
+        "success-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "warning": {
+          "value": "oklch(0.57 0.161668 86.047)",
+          "ref": "warning.600"
+        },
+        "warning-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "danger": {
+          "value": "oklch(0.57 0.207849 25.331)",
+          "ref": "danger.600"
+        },
+        "danger-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        }
+      },
+      "dark": {
+        "background": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "surface": {
+          "value": "oklch(0.32 0.01188 285.805)",
+          "ref": "neutral.900"
+        },
+        "text": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "muted": {
+          "value": "oklch(0.32 0.01188 285.805)",
+          "ref": "neutral.900"
+        },
+        "muted-foreground": {
+          "value": "oklch(0.8 0.01188 285.805)",
+          "ref": "neutral.300"
+        },
+        "card": {
+          "value": "oklch(0.32 0.01188 285.805)",
+          "ref": "neutral.900"
+        },
+        "card-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "popover": {
+          "value": "oklch(0.32 0.01188 285.805)",
+          "ref": "neutral.900"
+        },
+        "popover-foreground": {
+          "value": "oklch(0.97 0.01188 285.805)",
+          "ref": "neutral.50"
+        },
+        "border": {
+          "value": "oklch(0.4 0.01188 285.805)",
+          "ref": "neutral.800"
+        },
+        "input": {
+          "value": "oklch(0.4 0.01188 285.805)",
+          "ref": "neutral.800"
+        },
+        "ring": {
+          "value": "oklch(0.72 0.232542 303.9)",
+          "ref": "primary.400"
+        },
+        "primary": {
+          "value": "oklch(0.65 0.232542 303.9)",
+          "ref": "primary.500"
+        },
+        "primary-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "secondary": {
+          "value": "oklch(0.65 0.01188 285.805)",
+          "ref": "secondary.500"
+        },
+        "secondary-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "accent": {
+          "value": "oklch(0.65 0.176688 305.504)",
+          "ref": "accent.500"
+        },
+        "accent-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "info": {
+          "value": "oklch(0.65 0.147869 237.323)",
+          "ref": "info.500"
+        },
+        "info-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "success": {
+          "value": "oklch(0.65 0.192007 149.579)",
+          "ref": "success.500"
+        },
+        "success-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "warning": {
+          "value": "oklch(0.65 0.161668 86.047)",
+          "ref": "warning.500"
+        },
+        "warning-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        },
+        "danger": {
+          "value": "oklch(0.65 0.207849 25.331)",
+          "ref": "danger.500"
+        },
+        "danger-foreground": {
+          "value": "oklch(0.24 0.01188 285.805)",
+          "ref": "neutral.950"
+        }
+      }
+    }
+  }
+}

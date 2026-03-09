@@ -1,0 +1,12 @@
+@use "../tokens.scss" as tokens;
+
+$body-bg: tokens.$background;
+$body-color: tokens.$text;
+$border-color: tokens.$border;
+$primary: tokens.$primary;
+$secondary: tokens.$secondary;
+$info: tokens.$info;
+$success: tokens.$success;
+$warning: tokens.$warning;
+$danger: tokens.$danger;
+$card-bg: tokens.$surface;
