@@ -11,8 +11,8 @@ import LayoutShell from '@/layouts/LayoutShell.vue'
       </h1>
 
       <p class="max-w-2xl mx-auto text-lg text-muted-foreground">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Vestibulum in neque et nisl facilisis sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum in neque et nisl facilisis sodales.
         Suspendisse potenti. Sed at risus vitae purus pretium ultricies.
       </p>
 
@@ -31,7 +31,7 @@ import LayoutShell from '@/layouts/LayoutShell.vue'
       <div class="text-center mb-12">
         <h2 class="text-3xl font-heading font-semibold">What We Build</h2>
         <p class="text-muted-foreground mt-4 max-w-xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Praesent commodo cursus magna, vel scelerisque nisl consectetur.
         </p>
       </div>
@@ -40,7 +40,7 @@ import LayoutShell from '@/layouts/LayoutShell.vue'
         <div class="p-6 rounded-xl border border-border bg-card">
           <h3 class="font-semibold text-xl mb-3">Automation Systems</h3>
           <p class="text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
           </p>
         </div>
@@ -77,7 +77,7 @@ import LayoutShell from '@/layouts/LayoutShell.vue'
           <div class="h-48 bg-muted rounded-lg mb-4"></div>
           <h3 class="text-xl font-semibold">Project Alpha</h3>
           <p class="text-muted-foreground mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Vestibulum id ligula porta felis euismod semper.
           </p>
         </div>
@@ -86,7 +86,7 @@ import LayoutShell from '@/layouts/LayoutShell.vue'
           <div class="h-48 bg-muted rounded-lg mb-4"></div>
           <h3 class="text-xl font-semibold">Project Beta</h3>
           <p class="text-muted-foreground mt-2">
-            Maecenas faucibus mollis interdum. 
+            Maecenas faucibus mollis interdum.
             Cras justo odio, dapibus ac facilisis in, egestas eget quam.
           </p>
         </div>
@@ -100,8 +100,8 @@ import LayoutShell from '@/layouts/LayoutShell.vue'
       </h2>
 
       <p class="max-w-xl mx-auto text-muted-foreground mb-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Curabitur blandit tempus porttitor. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Curabitur blandit tempus porttitor.
         Integer posuere erat a ante venenatis dapibus.
       </p>
 

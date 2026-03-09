@@ -1,23 +1,22 @@
 import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import { createRouter, createWebHistory } from "vue-router";
-import { createPinia } from "pinia";
-import routes from "./router/routes";
+import '@/style.css'
+import App from '@/App.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import { createPinia } from 'pinia'
+import routes from '@/router/routes'
 
-
-const app = createApp(App);
+const app = createApp(App)
 const router = createRouter({
-	history: createWebHistory(),
-	routes,
-});
+  history: createWebHistory(),
+  routes
+})
 
-const pinia = createPinia();
-app.use(pinia);
-app.use(router);
+const pinia = createPinia()
+app.use(pinia)
+app.use(router)
 
 const mountApp = () => {
-	app.mount("#app");
-};
+  app.mount('#app')
+}
 
-mountApp();
+mountApp()

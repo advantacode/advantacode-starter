@@ -5,12 +5,8 @@
       <div class="container mx-auto flex items-center justify-between py-4 px-6">
         <div class="text-xl font-heading font-semibold">AdvantaCode</div>
         <nav class="space-x-4">
-          <RouterLink
-            v-for="item in navItems"
-            :key="item.name"
-            :to="item.to"
-            class="text-foreground hover:text-primary font-medium transition-colors"
-          >
+          <RouterLink v-for="item in navItems" :key="item.name" :to="item.to"
+            class="text-foreground hover:text-primary font-medium transition-colors">
             {{ item.name }}
           </RouterLink>
         </nav>
@@ -23,8 +19,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-background border-t border-border mt-auto py-4 px-6 text-center text-sm text-muted">
-      © {{ new Date().getFullYear() }} AdvantaCode!!!. All rights reserved.
+    <footer class="bg-primary border-t border-border mt-auto py-4 px-6 text-center text-sm text-muted">
+      © {{ new Date().getFullYear() }} AdvantaCode. All rights reserved.
     </footer>
   </div>
 </template>

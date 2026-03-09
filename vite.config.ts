@@ -7,22 +7,19 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
   },
-  plugins: [
-    vue(),
-    tailwindcss(),
-  ],
+  plugins: [vue(), tailwindcss()],
   server: {
     host: '0.0.0.0',
     port: Number(process.env.VITE_PORT) || 5173,
     strictPort: true,
-    allowedHosts: ['.ngrok-free.app', 'advantacode-web.ddev.site'],
-    origin: `https://advantacode-web.ddev.site:${Number(process.env.VITE_PORT) || 5173}`,
+    allowedHosts: ['.ngrok-free.app', 'advantacode-starter.ddev.site'],
+    origin: `https://advantacode-starter.ddev.site:${Number(process.env.VITE_PORT) || 5173}`,
     hmr: {
-      host: 'advantacode-web.ddev.site',
-      protocol: 'wss',
-    },
-  },
+      host: 'advantacode-starter.ddev.site',
+      protocol: 'wss'
+    }
+  }
 })
