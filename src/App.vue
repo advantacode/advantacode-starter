@@ -1,5 +1,7 @@
+<script setup lang="ts">
+import AppRoot from '@/app/AppRoot.vue'
+</script>
+
 <template>
-  <div class="min-h-screen bg-background text-foreground">
-    <router-view />
-  </div>
+  <AppRoot />
 </template>

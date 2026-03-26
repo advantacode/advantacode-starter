@@ -1,8 +1,9 @@
+@import './brand.css';
 @import 'tailwindcss';
 @import '@/assets/base.css';
-@import '@/generated/brand/tokens.css';
-@import '@/generated/brand/themes/light.css';
-@import '@/generated/brand/themes/dark.css';
+@import '@/_generated/brand/tokens.css';
+@import '@/_generated/brand/themes/light.css';
+@import '@/_generated/brand/themes/dark.css';
 /* @import '@/assets/theme.css'; */
 
 /* Keep the starter's existing token names wired to brander output. */
@@ -52,3 +53,6 @@
     color: var(--text);
   }
 }
+
+
+

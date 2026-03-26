@@ -28,7 +28,18 @@ export default {
         "warning-foreground": "var(--warning-foreground)",
         "danger": "var(--danger)",
         "danger-foreground": "var(--danger-foreground)",
-      }
+      },
+      spacing: {
+        "lg": "var(--space-lg)",
+        "md": "var(--space-md)",
+        "sm": "var(--space-sm)",
+        "xl": "var(--space-xl)",
+        "xs": "var(--space-xs)",
+      },
+      fontFamily: {
+        "sans": ["var(--font-sans)"],
+        "mono": ["var(--font-mono)"],
+      },
     }
   }
 };

@@ -1,5 +1,7 @@
-# Environment variables
+# Environment variables (local only, never commit)
 .env
+.env.local
+.env.*.local
 
 # Node
 node_modules/
@@ -25,5 +27,6 @@ Thumbs.db
 .idea/
 
 # Temporary/other
+.cache/
 *.tmp
 *.swp

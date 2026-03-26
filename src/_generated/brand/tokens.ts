@@ -1,26 +1,26 @@
 export const metadata = {
-  "version": "0.0.1",
-  "generated": "2026-03-09T00:44:30.935Z",
+  "version": "0.3.0",
+  "generated": "2026-03-26T03:08:48.270Z",
   "themes": [
     "light",
     "dark"
   ],
   "adapters": [
-    "tailwind",
     "bootstrap",
-    "figma"
+    "figma",
+    "tailwind"
   ],
   "artifacts": [
-    "tokens.css",
-    "themes/light.css",
+    "adapters/bootstrap.variables.scss",
+    "adapters/figma.tokens.json",
+    "adapters/tailwind.preset.ts",
+    "metadata.json",
     "themes/dark.css",
+    "themes/light.css",
+    "tokens.css",
     "tokens.json",
     "tokens.scss",
-    "adapters/bootstrap.variables.scss",
-    "adapters/tailwind.preset.ts",
-    "adapters/figma.tokens.json",
-    "tokens.ts",
-    "metadata.json"
+    "tokens.ts"
   ],
   "cssPrefix": ""
 } as const;
@@ -29,17 +29,17 @@ export const tokens = {
   "color": {
     "primitive": {
       "primary": {
-        "50": "oklch(0.97 0.232542 303.9)",
-        "100": "oklch(0.93 0.232542 303.9)",
-        "200": "oklch(0.87 0.232542 303.9)",
-        "300": "oklch(0.8 0.232542 303.9)",
-        "400": "oklch(0.72 0.232542 303.9)",
-        "500": "oklch(0.65 0.232542 303.9)",
-        "600": "oklch(0.57 0.232542 303.9)",
-        "700": "oklch(0.49 0.232542 303.9)",
-        "800": "oklch(0.4 0.232542 303.9)",
-        "900": "oklch(0.32 0.232542 303.9)",
-        "950": "oklch(0.24 0.232542 303.9)"
+        "50": "oklch(0.97 0.164659 70.08)",
+        "100": "oklch(0.93 0.164659 70.08)",
+        "200": "oklch(0.87 0.164659 70.08)",
+        "300": "oklch(0.8 0.164659 70.08)",
+        "400": "oklch(0.72 0.164659 70.08)",
+        "500": "oklch(0.65 0.164659 70.08)",
+        "600": "oklch(0.57 0.164659 70.08)",
+        "700": "oklch(0.49 0.164659 70.08)",
+        "800": "oklch(0.4 0.164659 70.08)",
+        "900": "oklch(0.32 0.164659 70.08)",
+        "950": "oklch(0.24 0.164659 70.08)"
       },
       "secondary": {
         "50": "oklch(0.97 0.01188 285.805)",
@@ -55,17 +55,17 @@ export const tokens = {
         "950": "oklch(0.24 0.01188 285.805)"
       },
       "accent": {
-        "50": "oklch(0.97 0.176688 305.504)",
-        "100": "oklch(0.93 0.176688 305.504)",
-        "200": "oklch(0.87 0.176688 305.504)",
-        "300": "oklch(0.8 0.176688 305.504)",
-        "400": "oklch(0.72 0.176688 305.504)",
-        "500": "oklch(0.65 0.176688 305.504)",
-        "600": "oklch(0.57 0.176688 305.504)",
-        "700": "oklch(0.49 0.176688 305.504)",
-        "800": "oklch(0.4 0.176688 305.504)",
-        "900": "oklch(0.32 0.176688 305.504)",
-        "950": "oklch(0.24 0.176688 305.504)"
+        "50": "oklch(0.97 0.164422 84.429)",
+        "100": "oklch(0.93 0.164422 84.429)",
+        "200": "oklch(0.87 0.164422 84.429)",
+        "300": "oklch(0.8 0.164422 84.429)",
+        "400": "oklch(0.72 0.164422 84.429)",
+        "500": "oklch(0.65 0.164422 84.429)",
+        "600": "oklch(0.57 0.164422 84.429)",
+        "700": "oklch(0.49 0.164422 84.429)",
+        "800": "oklch(0.4 0.164422 84.429)",
+        "900": "oklch(0.32 0.164422 84.429)",
+        "950": "oklch(0.24 0.164422 84.429)"
       },
       "info": {
         "50": "oklch(0.97 0.147869 237.323)",
@@ -181,11 +181,11 @@ export const tokens = {
         },
         "ring": {
           "ref": "primary.500",
-          "value": "oklch(0.65 0.232542 303.9)"
+          "value": "oklch(0.65 0.164659 70.08)"
         },
         "primary": {
           "ref": "primary.600",
-          "value": "oklch(0.57 0.232542 303.9)"
+          "value": "oklch(0.57 0.164659 70.08)"
         },
         "primary-foreground": {
           "ref": "neutral.50",
@@ -201,7 +201,7 @@ export const tokens = {
         },
         "accent": {
           "ref": "accent.600",
-          "value": "oklch(0.57 0.176688 305.504)"
+          "value": "oklch(0.57 0.164422 84.429)"
         },
         "accent-foreground": {
           "ref": "neutral.50",
@@ -287,11 +287,11 @@ export const tokens = {
         },
         "ring": {
           "ref": "primary.400",
-          "value": "oklch(0.72 0.232542 303.9)"
+          "value": "oklch(0.72 0.164659 70.08)"
         },
         "primary": {
           "ref": "primary.500",
-          "value": "oklch(0.65 0.232542 303.9)"
+          "value": "oklch(0.65 0.164659 70.08)"
         },
         "primary-foreground": {
           "ref": "neutral.950",
@@ -307,7 +307,7 @@ export const tokens = {
         },
         "accent": {
           "ref": "accent.500",
-          "value": "oklch(0.65 0.176688 305.504)"
+          "value": "oklch(0.65 0.164422 84.429)"
         },
         "accent-foreground": {
           "ref": "neutral.950",
@@ -346,6 +346,31 @@ export const tokens = {
           "value": "oklch(0.24 0.01188 285.805)"
         }
       }
+    }
+  },
+  "typography": {
+    "fontSans": {
+      "value": "\"Inter\", sans-serif"
+    },
+    "fontMono": {
+      "value": "\"JetBrains Mono\", monospace"
+    }
+  },
+  "spacing": {
+    "lg": {
+      "value": "1.5rem"
+    },
+    "md": {
+      "value": "1rem"
+    },
+    "sm": {
+      "value": "0.5rem"
+    },
+    "xl": {
+      "value": "2rem"
+    },
+    "xs": {
+      "value": "0.25rem"
     }
   }
 } as const;
