@@ -12,8 +12,9 @@ pnpm-lock.yaml
 # Build
 dist/
 
-# DDEV generated files
-.ddev/
+# DDEV
+.ddev/*
+!.ddev/config.yaml
 
 # Logs
 npm-debug.log*

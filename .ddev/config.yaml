@@ -1,0 +1,32 @@
+name: starter-web
+type: generic
+docroot: 'dist'
+project_root: '.'
+php_version: '8.3'
+webserver_type: nginx-fpm
+nodejs_version: '22'
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+  type: mysql
+  version: '8.0'
+use_dns_when_possible: true
+composer_version: '2'
+web_environment: []
+corepack_enable: false
+web_extra_exposed_ports:
+  - name: vite
+    container_port: 5173
+    http_port: 5172
+    https_port: 5173
+
+  - name: vite-preview
+    container_port: 4173
+    http_port: 4172
+    https_port: 4173
+
+  - name: wrangler
+    container_port: 8790
+    http_port: 8789
+    https_port: 8790
