@@ -64,11 +64,20 @@ See [TESTING.md](TESTING.md) for more details about the test suite.
 
 ## 5. Add The First Product Domain
 
-1. Create `src/domains/<domain-name>`
-2. Add a route module for that domain
-3. Add views, composables, stores, and UI for that domain only as needed
-4. Connect the domain to the backend API starter contract
-5. Update docs if the public workflow or structure changes
+Use AdvantaCode CLI for the first domain scaffold:
+
+```bash
+npm run ac:domain auth
+npm run ac:make view Login -- --domain auth
+```
+
+This creates and wires the domain route module automatically, then adds the first view.
+
+Then continue with product-specific work:
+
+1. Add views, composables, stores, and UI for that domain only as needed
+2. Connect the domain to the backend API starter contract
+3. Update docs if the public workflow or structure changes
 
 ## 6. Sanctum Token Usage Pattern (Recommended)
 

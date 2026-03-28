@@ -16,7 +16,9 @@
     "test:ui": "vitest --ui",
     "check": "npm run type-check && npm run lint && npm run test",
     "brand:setup": "advantacode-brander setup --out ./src/_generated/brand --style ./src/style.css",
-    "brand:generate": "advantacode-brander --out src/_generated/brand"
+    "brand:generate": "advantacode-brander --out src/_generated/brand",
+    "ac:make": "advantacode make",
+    "ac:domain": "advantacode make domain"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "@advantacode/brander": "^0.3.0",
+    "@advantacode/cli": "github:advantacode/advantacode-cli#main",
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",

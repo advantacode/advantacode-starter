@@ -9,6 +9,7 @@ Vue 3 + TypeScript + Vite starter aligned to the same domain-based process as th
 - Shared app shell and router composition
 - Pinia-ready application bootstrap
 - Brand token support via `@advantacode/brander`
+- Domain scaffolding support via `@advantacode/cli`
 - DDEV-friendly Vite host configuration
 
 Starter documentation:
