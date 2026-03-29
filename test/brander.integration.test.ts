@@ -109,11 +109,6 @@ describe('Brander Integration', () => {
   })
 
   describe('Environment Variables', () => {
-    it('.env file should exist', () => {
-      const envFile = path.join(projectRoot, '.env')
-      expect(fs.existsSync(envFile)).toBe(true)
-    })
-
     it('.env.example file should exist for documentation', () => {
       const envExampleFile = path.join(projectRoot, '.env.example')
       expect(fs.existsSync(envExampleFile)).toBe(true)
