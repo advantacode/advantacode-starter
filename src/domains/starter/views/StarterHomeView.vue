@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import AppShell from '@/app/layouts/AppShell.vue'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '/api/v1'
 
@@ -30,117 +39,144 @@ const spacingTokens = ['space-xs', 'space-sm', 'space-md', 'space-lg', 'space-xl
 
 <template>
   <AppShell>
-    <section class="space-y-6 py-10">
-      <p class="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+    <!-- Hero -->
+    <section class="space-y-4 py-10">
+      <p class="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
         Domain-Based Frontend Starter
       </p>
-
       <h1 class="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
         A Vue starter built to grow in parallel with the Laravel API starter.
       </h1>
-
       <p class="max-w-3xl text-lg text-muted-foreground">
         This template is structured around domains, shared support code, and predictable
         route modules so frontend and backend slices can stay aligned as the product grows.
       </p>
     </section>
 
-    <section class="grid gap-6 border-t border-border py-10 md:grid-cols-2">
-      <article class="rounded-2xl border border-border bg-card p-6">
-        <p class="text-sm font-medium text-muted-foreground">Frontend template</p>
-        <h2 class="mt-3 text-2xl font-semibold">What this starter owns</h2>
-        <ul class="mt-6 space-y-3 text-sm text-muted-foreground">
-          <li v-for="item in frontendOutputs" :key="item">
-            {{ item }}
-          </li>
-        </ul>
-      </article>
+    <Separator />
 
-      <article class="rounded-2xl border border-border bg-card p-6">
-        <p class="text-sm font-medium text-muted-foreground">Backend template</p>
-        <h2 class="mt-3 text-2xl font-semibold">What the API starter owns</h2>
-        <ul class="mt-6 space-y-3 text-sm text-muted-foreground">
-          <li v-for="item in backendOutputs" :key="item">
-            {{ item }}
-          </li>
-        </ul>
-      </article>
+    <!-- Ownership split -->
+    <section class="grid gap-6 py-10 md:grid-cols-2">
+      <Card>
+        <CardHeader>
+          <CardDescription>Frontend template</CardDescription>
+          <CardTitle>What this starter owns</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul class="space-y-3 text-sm text-muted-foreground">
+            <li v-for="item in frontendOutputs" :key="item" class="flex items-start gap-2">
+              <span class="mt-0.5 size-1.5 shrink-0 rounded-full bg-primary" />
+              {{ item }}
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardDescription>Backend template</CardDescription>
+          <CardTitle>What the API starter owns</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul class="space-y-3 text-sm text-muted-foreground">
+            <li v-for="item in backendOutputs" :key="item" class="flex items-start gap-2">
+              <span class="mt-0.5 size-1.5 shrink-0 rounded-full bg-secondary" />
+              {{ item }}
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
     </section>
 
-    <section class="grid gap-6 border-t border-border py-10 lg:grid-cols-[1.2fr_0.8fr]">
-      <article class="rounded-2xl border border-border bg-card p-6">
-        <p class="text-sm font-medium text-muted-foreground">Auth integration example</p>
-        <h2 class="mt-3 text-2xl font-semibold">Sanctum-ready frontend flow</h2>
+    <Separator />
 
-        <div class="mt-6 space-y-4 text-sm text-muted-foreground">
+    <!-- Auth + Env -->
+    <section class="grid gap-6 py-10 lg:grid-cols-[1.2fr_0.8fr]">
+      <Card>
+        <CardHeader>
+          <CardDescription>Auth integration example</CardDescription>
+          <CardTitle>Sanctum-ready frontend flow</CardTitle>
+        </CardHeader>
+        <CardContent class="space-y-3 text-sm text-muted-foreground">
           <p>
-            The starter includes a base Axios API client in <code>src/support/api</code> and an
-            auth domain store/composable/service example under <code>src/domains/auth</code>.
+            The starter includes a base Axios API client in <code
+              class="rounded bg-muted px-1 py-0.5 font-mono text-xs">src/support/api</code> and an
+            auth domain store/composable/service under <code
+              class="rounded bg-muted px-1 py-0.5 font-mono text-xs">src/domains/auth</code>.
           </p>
-
           <p>
             Use those files as the pattern for new domains: route module, view, service,
             store, and composable wired to the API starter contracts.
           </p>
-        </div>
-      </article>
+        </CardContent>
+      </Card>
 
-      <article class="rounded-2xl border border-border bg-card p-6">
-        <p class="text-sm font-medium text-muted-foreground">Environment</p>
-        <h2 class="mt-3 text-2xl font-semibold">Current API base</h2>
-
-        <p class="mt-6 break-all rounded-xl bg-muted px-4 py-3 font-mono text-sm text-foreground">
-          {{ apiBaseUrl }}
-        </p>
-      </article>
+      <Card>
+        <CardHeader>
+          <CardDescription>Environment</CardDescription>
+          <CardTitle>Current API base</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p class="break-all rounded-lg bg-muted px-4 py-3 font-mono text-sm text-foreground">
+            {{ apiBaseUrl }}
+          </p>
+        </CardContent>
+      </Card>
     </section>
 
-    <section class="grid gap-6 border-t border-border py-10 lg:grid-cols-[1.2fr_0.8fr]">
-      <article class="rounded-2xl border border-border bg-card p-6">
-        <p class="text-sm font-medium text-muted-foreground">Live token preview</p>
-        <h2 class="mt-3 text-2xl font-semibold">Semantic colors from generated tokens</h2>
+    <Separator />
 
-        <p class="mt-4 text-sm text-muted-foreground">
-          Update colors in <code>brand.config.ts</code>, run <code>npm run brand:generate</code>,
-          and refresh this page to verify token output instantly.
-        </p>
-
-        <div class="mt-6 grid gap-3 sm:grid-cols-2">
-          <div
-            v-for="token in semanticTokens"
-            :key="token"
-            class="rounded-xl border border-border p-4"
-            :style="{ backgroundColor: `var(--${token})`, color: `var(--${token}-foreground)` }"
-          >
-            <p class="text-sm font-semibold uppercase tracking-wide">{{ token }}</p>
-            <p class="mt-1 text-xs opacity-85">var(--{{ token }})</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="rounded-2xl border border-border bg-card p-6">
-        <p class="text-sm font-medium text-muted-foreground">Typography & spacing</p>
-        <h2 class="mt-3 text-2xl font-semibold">Non-color token sample</h2>
-
-        <div class="mt-6 space-y-4">
-          <p class="text-sm text-muted-foreground">Font tokens:</p>
-
-          <p class="text-lg" :style="{ fontFamily: 'var(--font-sans)' }">
-            Sans sample using <code>var(--font-sans)</code>
+    <!-- Token preview -->
+    <section class="grid gap-6 py-10 lg:grid-cols-[1.2fr_0.8fr]">
+      <Card>
+        <CardHeader>
+          <CardDescription>Live token preview</CardDescription>
+          <CardTitle>Semantic colors from generated tokens</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p class="mb-4 text-sm text-muted-foreground">
+            Update colors in <code class="rounded bg-muted px-1 py-0.5 font-mono text-xs">brand.config.ts</code>, run
+            <code class="rounded bg-muted px-1 py-0.5 font-mono text-xs">npm run brand:generate</code>,
+            and refresh to verify token output instantly.
           </p>
-
-          <p class="text-sm" :style="{ fontFamily: 'var(--font-mono)' }">
-            Mono sample using <code>var(--font-mono)</code>
-          </p>
-
-          <div class="space-y-3 pt-2">
-            <div v-for="spaceToken in spacingTokens" :key="spaceToken" class="text-xs">
-              <p class="mb-1 font-mono text-muted-foreground">{{ spaceToken }}</p>
-              <div class="rounded bg-primary" :style="{ height: '10px', width: `calc(var(--${spaceToken}) * 8)` }" />
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div v-for="token in semanticTokens" :key="token"
+              class="flex items-center justify-between rounded-lg border border-border p-3"
+              :style="{ backgroundColor: `var(--${token})`, color: `var(--${token}-foreground)` }">
+              <span class="text-sm font-semibold uppercase tracking-wide">{{ token }}</span>
+              <code class="text-xs opacity-75">var(--{{ token }})</code>
             </div>
           </div>
-        </div>
-      </article>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardDescription>Typography & spacing</CardDescription>
+          <CardTitle>Non-color token sample</CardTitle>
+        </CardHeader>
+        <CardContent class="space-y-5">
+          <div>
+            <p class="mb-2 text-xs text-muted-foreground">Font tokens</p>
+            <p class="text-base" :style="{ fontFamily: 'var(--font-sans)' }">
+              Sans — <code class="text-xs">var(--font-sans)</code>
+            </p>
+            <p class="mt-1 text-sm" :style="{ fontFamily: 'var(--font-mono)' }">
+              Mono — <code class="text-xs">var(--font-mono)</code>
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <p class="text-xs text-muted-foreground">Spacing tokens</p>
+            <div v-for="spaceToken in spacingTokens" :key="spaceToken" class="flex items-center gap-3 text-xs">
+              <Badge variant="outline" class="w-20 justify-center font-mono text-[10px]">
+                {{ spaceToken }}
+              </Badge>
+              <div class="h-2.5 rounded bg-primary" :style="{ width: `calc(var(--${spaceToken}) * 8)` }" />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </section>
   </AppShell>
 </template>
