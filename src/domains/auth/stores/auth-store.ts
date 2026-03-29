@@ -2,8 +2,8 @@ import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { clearAuthToken, getStoredAuthToken, setAuthToken } from '@/support/api/http'
 import { isUnauthorizedError, normalizeApiError } from '@/support/api/errors'
-import { fetchCurrentUser, login, logout } from '@/domains/auth/services/auth-service'
-import type { AuthUser, LoginPayload } from '@/support/api/types'
+import { fetchCurrentUser, login, logout, register } from '@/domains/auth/services/auth-service'
+import type { AuthUser, LoginPayload, RegisterPayload } from '@/support/api/types'
 
 export const useAuthStore = defineStore('auth', () => {
   const user = ref<AuthUser | null>(null)
@@ -13,15 +13,40 @@ export const useAuthStore = defineStore('auth', () => {
 
   const isAuthenticated = computed(() => Boolean(token.value && user.value))
 
-  async function signIn(payload: LoginPayload) {
+  function applySession(nextToken: string, nextUser: AuthUser) {
+    token.value = nextToken
+    user.value = nextUser
+    setAuthToken(nextToken)
+  }
+
+  function resetRequestState() {
     isLoading.value = true
     errorMessage.value = ''
+  }
+
+  async function signUp(payload: RegisterPayload) {
+    resetRequestState()
+
+    try {
+      const data = await register({ ...payload, device_name: 'web' })
+      applySession(data.token, data.user)
+    } catch (error) {
+      errorMessage.value = normalizeApiError(
+        error,
+        'Registration failed. Check your details and try again.'
+      )
+      throw error
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  async function signIn(payload: LoginPayload) {
+    resetRequestState()
 
     try {
       const data = await login({ ...payload, device_name: 'web' })
-      token.value = data.token
-      user.value = data.user
-      setAuthToken(data.token)
+      applySession(data.token, data.user)
     } catch (error) {
       errorMessage.value = normalizeApiError(
         error,
@@ -38,8 +63,7 @@ export const useAuthStore = defineStore('auth', () => {
       return
     }
 
-    isLoading.value = true
-    errorMessage.value = ''
+    resetRequestState()
 
     try {
       user.value = await fetchCurrentUser()
@@ -79,6 +103,7 @@ export const useAuthStore = defineStore('auth', () => {
     errorMessage,
     isAuthenticated,
     signIn,
+    signUp,
     signOut,
     loadCurrentUser,
     clearSession

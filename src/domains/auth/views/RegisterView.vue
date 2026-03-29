@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
-import { RouterLink } from 'vue-router'
-import { useRouter } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import AppShell from '@/app/layouts/AppShell.vue'
 import { useAuth } from '@/domains/auth/composables/use-auth'
 import { getValidationErrors, type ApiValidationErrors } from '@/support/api/errors'
@@ -16,21 +15,20 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '/api/v1'
-
-const credentials = reactive({
+const registration = reactive({
+  name: '',
   email: '',
-  password: ''
+  password: '',
+  password_confirmation: ''
 })
 
 const router = useRouter()
+const { isLoading, errorMessage, signUp } = useAuth()
 const validationErrors = ref<ApiValidationErrors>({})
-
-const { user, isLoading, errorMessage, isAuthenticated, signIn, signOut } = useAuth()
 
 const hasValidationErrors = computed(() => Object.keys(validationErrors.value).length > 0)
 
-function fieldError(field: keyof typeof credentials) {
+function fieldError(field: keyof typeof registration) {
   return validationErrors.value[field]?.[0] ?? ''
 }
 
@@ -38,7 +36,7 @@ async function handleSubmit() {
   validationErrors.value = {}
 
   try {
-    await signIn({ ...credentials })
+    await signUp({ ...registration })
     await router.push({ name: 'starter-dashboard' })
   } catch (error) {
     validationErrors.value = getValidationErrors(error)
@@ -55,19 +53,27 @@ async function handleSubmit() {
             Auth Domain
           </p>
           <CardTitle class="mt-2 text-2xl">
-            Sanctum login flow
+            Create your account
           </CardTitle>
           <CardDescription>
-            Full domain slice: auth composable, Pinia store, and API service wiring
-            for Laravel Sanctum token endpoints.
+            Registers a new user against the Laravel Sanctum auth API and starts an
+            authenticated session immediately.
           </CardDescription>
         </CardHeader>
 
         <CardContent class="space-y-6">
           <form class="space-y-4" @submit.prevent="handleSubmit">
             <div class="space-y-2">
-              <Label for="email">Email</Label>
-              <Input id="email" v-model="credentials.email" type="email" autocomplete="email"
+              <Label for="name">Name</Label>
+              <Input id="name" v-model="registration.name" autocomplete="name" placeholder="Jane Doe" required />
+              <p v-if="fieldError('name')" class="text-sm text-destructive">
+                {{ fieldError('name') }}
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <Label for="register-email">Email</Label>
+              <Input id="register-email" v-model="registration.email" type="email" autocomplete="email"
                 placeholder="you@example.com" required />
               <p v-if="fieldError('email')" class="text-sm text-destructive">
                 {{ fieldError('email') }}
@@ -75,11 +81,20 @@ async function handleSubmit() {
             </div>
 
             <div class="space-y-2">
-              <Label for="password">Password</Label>
-              <Input id="password" v-model="credentials.password" type="password" autocomplete="current-password"
-                placeholder="••••••••" required />
+              <Label for="register-password">Password</Label>
+              <Input id="register-password" v-model="registration.password" type="password" autocomplete="new-password"
+                placeholder="At least 8 characters" minlength="8" required />
               <p v-if="fieldError('password')" class="text-sm text-destructive">
                 {{ fieldError('password') }}
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <Label for="register-password-confirmation">Confirm password</Label>
+              <Input id="register-password-confirmation" v-model="registration.password_confirmation" type="password"
+                autocomplete="new-password" placeholder="Repeat your password" minlength="8" required />
+              <p v-if="fieldError('password_confirmation')" class="text-sm text-destructive">
+                {{ fieldError('password_confirmation') }}
               </p>
             </div>
 
@@ -87,33 +102,15 @@ async function handleSubmit() {
               {{ errorMessage }}
             </p>
 
-            <div class="flex items-center gap-3 pt-1">
-              <Button type="submit" :disabled="isLoading">
-                {{ isLoading ? 'Signing in…' : 'Sign in' }}
-              </Button>
-
-              <Button v-if="isAuthenticated" type="button" variant="outline" @click="signOut">
-                Sign out
-              </Button>
-            </div>
+            <Button type="submit" class="w-full" :disabled="isLoading">
+              {{ isLoading ? 'Creating account…' : 'Create account' }}
+            </Button>
           </form>
 
-          <div v-if="isAuthenticated && user"
-            class="rounded-lg bg-success/10 px-4 py-3 text-sm text-success-foreground ring-1 ring-success/20">
-            <span class="font-medium">Authenticated:</span>
-            <span class="ml-2 text-muted-foreground">{{ user.email }}</span>
-          </div>
-
-          <div class="rounded-lg bg-muted px-4 py-3 text-sm">
-            <span class="font-medium text-foreground">API base:</span>
-            <span class="ml-2 font-mono text-muted-foreground">{{ apiBaseUrl }}</span>
-          </div>
-
           <p class="text-sm text-muted-foreground">
-            Need an account?
-            <RouterLink class="font-medium text-foreground underline underline-offset-4"
-              :to="{ name: 'auth-register' }">
-              Create one here
+            Already have an account?
+            <RouterLink class="font-medium text-foreground underline underline-offset-4" :to="{ name: 'auth-login' }">
+              Sign in instead
             </RouterLink>
           </p>
         </CardContent>

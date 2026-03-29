@@ -1,10 +1,27 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useAuth } from '@/domains/auth/composables/use-auth'
 import { primaryNavigation } from '@/support/navigation/primary-navigation'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 
 const appName = import.meta.env.VITE_APP_NAME || 'Starter Frontend'
+const { isAuthenticated } = useAuth()
+
+const visibleNavigation = computed(() => {
+  return primaryNavigation.filter((item) => {
+    if (item.guestOnly) {
+      return !isAuthenticated.value
+    }
+
+    if (item.requiresAuth) {
+      return isAuthenticated.value
+    }
+
+    return true
+  })
+})
 </script>
 
 <template>
@@ -16,7 +33,7 @@ const appName = import.meta.env.VITE_APP_NAME || 'Starter Frontend'
         </RouterLink>
 
         <nav class="flex items-center gap-1">
-          <Button v-for="item in primaryNavigation" :key="item.to" as-child variant="ghost" size="sm">
+          <Button v-for="item in visibleNavigation" :key="item.to" as-child variant="ghost" size="sm">
             <RouterLink :to="item.to">{{ item.label }}</RouterLink>
           </Button>
         </nav>

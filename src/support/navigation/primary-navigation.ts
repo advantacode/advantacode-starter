@@ -1,14 +1,28 @@
-export const primaryNavigation = [
+export interface PrimaryNavigationItem {
+  label: string
+  to: string
+  requiresAuth?: boolean
+  guestOnly?: boolean
+}
+
+export const primaryNavigation: PrimaryNavigationItem[] = [
   {
     label: 'Overview',
     to: '/'
   },
   {
     label: 'Dashboard',
-    to: '/dashboard'
+    to: '/dashboard',
+    requiresAuth: true
   },
   {
     label: 'Login',
-    to: '/login'
+    to: '/login',
+    guestOnly: true
+  },
+  {
+    label: 'Register',
+    to: '/register',
+    guestOnly: true
   }
 ]

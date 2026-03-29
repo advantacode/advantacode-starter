@@ -12,6 +12,7 @@ export function useAuth() {
     errorMessage,
     isAuthenticated,
     signIn: authStore.signIn,
+    signUp: authStore.signUp,
     signOut: authStore.signOut,
     loadCurrentUser: authStore.loadCurrentUser,
     clearSession: authStore.clearSession

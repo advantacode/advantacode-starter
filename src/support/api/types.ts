@@ -30,6 +30,19 @@ export interface LoginData {
   user: AuthUser
 }
 
+export interface RegisterPayload {
+  name: string
+  email: string
+  password: string
+  password_confirmation: string
+  device_name?: string
+}
+
+export interface RegisterData {
+  token: string
+  user: AuthUser
+}
+
 export interface MeData {
   user: AuthUser
 }
